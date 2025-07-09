@@ -7,7 +7,8 @@ export default function QueryPane({ mode, sessionId }) {
     const [response, setResponse] = useState('');
     const [displayedText, setDisplayedText] = useState('');
     const [loading, setLoading] = useState(false);
-    const baseUrl = 'https://multi-agent-api-g6gf.onrender.com';
+    const baseUrl = import.meta.env.VITE_API_URL;
+
 
     useEffect(() => {
         setQuery('');
